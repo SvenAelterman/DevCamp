@@ -21,7 +21,7 @@ This is a quick demo showing how quickly you can create a new Web App in the por
 
 1.  Back in the portal, Under 'General' option select 'Application settings'. Show that .NET, PHP, Python and Java are all shown.
 
-## Demo 2 - WebJobs
+##Demo 2 - WebJobs
 
 This sample demonstrates creating a WebJob and performing operations with Microsoft Azure WebJobs SDK. In this sample, the Program class starts the JobHost and creates the demo data. The Functions class contains methods that will be invoked when messages are placed on the queues and tables, based on the attributes in the method headers.
 
@@ -30,11 +30,17 @@ This sample demonstrates creating a WebJob and performing operations with Micros
  > Note: You can use the Web App you provisioned in the first demo here.
  
 2. Provision a new storage account: New / Data + Storage / Storage account.
+
 2. In Visual Studio, go to File -> New -> Project and navigate to Visual C# -> Cloud -> QuickStarts -> Select "Azure WebJobs SDK: Tables"
+
 3. Select the name and location for the project and click "ok".
+
 4. Open the project in Visual Studio, and compile (to download all the packages required inside bin directory)
+
 5. Enter the storage account name and key as instructed in App.config.
+
 6. Right-click project, select "Publish as Azure WebJob.." and then select "run on-demand" from the dropdown.
+
 7. Select "Microsoft Azure App Service" and Click Next.
 
 8. Select the relevant subscription/ resource group and web app.
@@ -42,8 +48,11 @@ This sample demonstrates creating a WebJob and performing operations with Micros
  > If needed, sign in to your Azure account using the **Add an account...** dropdown at the top.
  
 9. Modify any details that you want here and click "Publish".
+
 10. Find the WebJob under the Web App node in Server Explorer, right-click and select run.
+
 11. Find the storage account in Server Explorer and show the results in queue(textinput) and table(words).
+
 12. Show how to run the WebJob from the Wep App's WebJob setting blade in the portal. Show the log of successful runs.
 
 ## Demo 3 - Creating an API App
@@ -86,7 +95,7 @@ This is a quick demo showing how quickly you can create a new API App using Visu
 		{
 		    public class ProductsController : ApiController
 		    {
-						List<Product> products = new List<Product>
+				List<Product> products = new List<Product>
 		        {
 		            new Product { Id = 1, Name = "Tomato Soup", Category = "Groceries", Price = 1 },
 		            new Product { Id = 2, Name = "Yo-yo", Category = "Toys", Price = 3.75M },
@@ -124,9 +133,9 @@ This is a quick demo showing how quickly you can create a new API App using Visu
 
 12. Leave the project in Visual Studio open for future demos
 
-## Demo 4 - Basic Mobile App with Validation
+##Demo 4 - Basic Mobile App with Validation
 
-Create a .NET backend using the Azure portal
+###Create a .NET backend using the Azure portal
 
 You can create a new mobile application right in the [*Azure portal*](https://portal.azure.com/). You can either follow the steps below, or create a new client and server together by following the [*Create a mobile app*](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-ios-get-started/) tutorial.
 
@@ -140,10 +149,10 @@ You can create a new mobile application right in the [*Azure portal*](https://p
 
 4. Use the default App Service plan, select a different plan or [*create a new plan*](https://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/#create-an-app-service-plan), then click **Create**.
 
-	This creates the Mobile App backend. Later you will deploy your server project to this backend. Provisioning a Mobile App backend can take several minutes; the **Settings** blade for the Mobile App backend is displayed when complete. Before you can use the Mobile App backend, you must also define a connection a data store.
+This creates the Mobile App backend. Later you will deploy your server project to this backend. Provisioning a Mobile App backend can take several minutes; the **Settings** blade for the Mobile App backend is displayed when complete. Before you can use the Mobile App backend, you must also define a connection a data store.
 
-	> NOTE:
-	> As part of this tutorial, you create a new SQL Database instance and server. You can reuse this new database and administer it as you would any other SQL Database instance. If you already have a database in the same location as the new mobile app backend, you can instead choose **Use an existing database** and then select that database. The use of a database in a different location is not recommended because of additional bandwidth costs and higher latencies. Other data storage options are available.
+> NOTE:
+> As part of this tutorial, you create a new SQL Database instance and server. You can reuse this new database and administer it as you would any other SQL Database instance. If you already have a database in the same location as the new mobile app backend, you can instead choose **Use an existing database** and then select that database. The use of a database in a different location is not recommended because of additional bandwidth costs and higher latencies. Other data storage options are available.
  
 5. In the **Settings** blade for the new Mobile App backend, click **Quick start** &gt; your client app platform &gt; **Connect a database**. 
 
@@ -159,27 +168,27 @@ You can create a new mobile application right in the [*Azure portal*](https://p
 
 	Creation of the database can take a few minutes. Use the **Notifications** area to monitor the progress of the deployment. You cannot continue until the database has been deployed successfully.
 
-9. Back in the *Quick Start* blade, under **Create a table API**, choose **C\#** as your **Backend language**
-
-10. Click Download, extract the compressed project files to your local computer, and open the solution in Visual Studio.
-
-### Configure the server project
+###Configure the server project
 
 1. Back in the Mobile App backend settings, click **Quick Start** > your client platform.
 
 2. Under **Create a table API**, select **C\#** as your **Backend language**,
 
-3. Click **Download**, extract the compressed project files to your local computer, open the solution in Visual Studio, build the project to restore the NuGet packages, then deploy the project to Azure. To learn how to deploy a .NET backend server project to Azure, see [How to: Publish the server project](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-dotnet-backend-how-to-use-server-sdk/#publish-server-project) in the .NET backend SDK topic.
+3. Click **Download**, extract the compressed project files to your local computer, and open the solution in Visual Studio.
+4. Build the project to restore the NuGet packages
+5. Deploy the project to Azure.
+
+To learn how to deploy a .NET backend server project to Azure, see [How to: Publish the server project](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-dotnet-backend-how-to-use-server-sdk/#publish-server-project) in the .NET backend SDK topic.
 
 You Mobile App backend is now ready to use with your client app.
 
 ###Download and run the client project
 
-Once you have configured your Mobile App backend, you can either create a new client app or modify an existing app to connect to Azure. In this section, you download a universal Windows app template project that is customized to connect to your Mobile App backend.
+Once you have configured your Mobile App backend, you can either create a new client app or modify an existing app to connect to Azure. In this section, you download a Universal Windows app template project that is customized to connect to your Mobile App backend.
 
 1. Back in the **Quick Start** blade for your Mobile App backend, click **Create a new app** &gt; **Download**, then extract the compressed project files to your local computer.
 
-2. (Optional) Add the universal Windows app project to the solution with the server project. This makes it easier to debug and test both the app and the backend in the same Visual Studio solution, if you choose to do so.
+2. (Optional) Add the Universal Windows app project to the solution with the server project. This makes it easier to debug and test both the app and the backend in the same Visual Studio solution, if you choose to do so.
 
 3. With the Windows Store app as the startup project, press the F5 key to rebuild the project and start the Windows Store app.
 
