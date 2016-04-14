@@ -232,17 +232,17 @@ Notice that data saved from the previous step is loaded from the mobile app afte
 
 Now that the mobile service is setup to validate data and send error responses for an invalid text length, you need to update your app to be able to handle error responses from validation. The error will be caught as a _MobileServiceInvalidOperationException_ from the client app's call to _IMobileServiceTable<TodoItem].InsertAsync()_.
 
-1. In the Solution Explorer window in Visual Studio, navigate to the client project and open the MainPage.xaml.cs file. Add the following using statement in that file:
+1. In the Solution Explorer window in Visual Studio, navigate to the .Shared client project and open the MainPage.cs file. Add the following using statement in that file:
 
-		using Windows.UI.Popups;
 		using Newtonsoft.Json.Linq;
 		
-2. In **MainPage.xaml.cs** replace the existing **InsertTodoItem** method with the following code:
+2. In **MainPage.cs** replace the existing **InsertTodoItem** method with the following code:
 		
 		private async void InsertTodoItem(TodoItem todoItem)
 		{
 			// This code inserts a new TodoItem into the database. When the operation completes
 			// and Mobile Services has assigned an Id, the item is added to the CollectionView MobileServiceInvalidOperationException invalidOpException = null;
+
 			try
 			{
 				await todoTable.InsertAsync(todoItem);
@@ -252,6 +252,7 @@ Now that the mobile service is setup to validate data and send error responses f
 			{
 				invalidOpException = e;
 			}
+			
 			if (invalidOpException != null)
 			{
 				string strJsonContent = await invalidOpException.Response.Content.ReadAsStringAsync();
@@ -263,7 +264,7 @@ Now that the mobile service is setup to validate data and send error responses f
 		
 This version of the method includes error handling for the **MobileServiceInvalidOperationException** that displays the deserialized error message from the response content in a message dialog.
 
-### Test Length Validation
+###Test Length Validation
 
 1. In Solution Explorer in Visual Studio, right click the client app project and then click **Set as StartUp Project**. Then press the **F5** key to start the app hosting the service locally in IIS Express.
 
@@ -273,7 +274,7 @@ This version of the method includes error handling for the **MobileServiceInvali
 
 ![](images/output.png)
 
-## Demo 4 - Basic Mobile App with Validation
+##Demo 5 - Logic App
 
 Logic Apps allow developers to design workflows that start from a trigger and then execute a series of steps. Each step invokes an App Service API app whilst securely taking care of authentication and best practices, like checkpointing and durable execution.
 
