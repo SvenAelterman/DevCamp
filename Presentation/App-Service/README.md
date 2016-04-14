@@ -93,7 +93,7 @@ This is a quick demo showing how quickly you can create a new API App using Visu
 		{
 		    public class ProductsController : ApiController
 		    {
-						List<Product> products = new List<Product>
+			List<Product> products = new List<Product>
 		        {
 		            new Product { Id = 1, Name = "Tomato Soup", Category = "Groceries", Price = 1 },
 		            new Product { Id = 2, Name = "Yo-yo", Category = "Toys", Price = 3.75M },
