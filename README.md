@@ -123,7 +123,7 @@
 					<tr>
 					   <td>Data Storage</td>
 					   <td>[Presentation](Presentation/Data-Storage/Data-Storage.pptx) | [Demos](Presentation/Data-Storage/)</td>
-					   <td>This module gives an overview of HDInsight</td>
+					   <td>This module gives an overview of Storage: Tables, Queues, Blobs and Files.</td>
 					</tr>
 					<tr>
 					   <td>IaaS</td>
