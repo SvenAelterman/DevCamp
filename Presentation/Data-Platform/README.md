@@ -4,7 +4,7 @@
 ## Overview ##
 This is a set of demos showing different data related services in the [Microsft Azure Platform](http://azure.microsoft.com/en-us/services/).
 
-**Note:** This module does not cover the [Microsoft Azure Storage](http://azure.microsoft.com/en-us/services/storage/) Service. There is a whole separate module focusing only on Microsoft Azure [Data Storage](..\Data-Storage\Data-Storage.pptx).
+> **Note:** This module does not cover the [Microsoft Azure Storage](http://azure.microsoft.com/en-us/services/storage/) Service. There is a whole separate module focusing only on Microsoft Azure [Data Storage](..\Data-Storage\Data-Storage.pptx).
 
 <a id="goals" />
 ### Goals ###
@@ -23,26 +23,26 @@ Follow these steps to setup your environment for the demo.
 <a name="Demo1"></a>
 ## Demo 1) Creating A SQL Database Server and a SQL Database ##
 
-In this dem you will use the new Azure Portal (Ibiza) to create a new database server.
+In this demo you will use the new Azure Portal to create a new database server.
 
 1. Log into [http://portal.azure.com](http://portal.azure.com)
-2. Click on “new +” in the bottom left corner and select SQL Database.
+2. Click on “New +” in the top left corner and select Data + Storage / SQL Database (new database).
 3. Enter Database name and select source -> Blank database.
-4. Open up Pricing Tier and “Browse all pricing tiers”. Show the tiers and then select one. For instance “Basic”!
-5. Click on Server and enter a name. Point out that the old (current) portal does not allow you to specify your own name for the server.
+4. Open up Pricing Tier and “View all”. Show the tiers and then select one.
+5. Click on Server and enter a name. Point out that the old portal does not allow you to specify your own name for the server.
 6. Enter the data you wish for server.
 7. Click Create and let it create.
-8. Show the database. Also click on properties and show the connection strings.
+8. Show the database. Also click on **Properties** and show the connection strings.
 
 > **Speaking point:** In this way or with command-line tools like PowerShell and xplat-cli you can create and manage any number of databases in a matter of seconds. [Azure Command-line Tools](http://azure.microsoft.com/en-us/downloads/)
 
 <a name="Demo2"></a>
-## Demo 2) Connect from on premise and deploy your database ##
+## Demo 2) Connect from on-premise and deploy your database ##
 
-Using the same database server from before…
+Using the database created in Demo 1:
 
-1. Back in the portal with the database from last demo, click on “Open in Visual Studio” and firewall. Show that it’s work in progress here.
-2. Go to the old portal and configure firewall based on current IP. Reload this in the new portal and see the firewall rule there.
+1. Back in the portal with the database from last demo, click on “Open in Visual Studio” and firewall.
+2. Configure the firewall based on current IP. 
 3. Click Open in Visual Studio and show the database from Visual Studio.
 4. Open SSMS (SQL Server Management Studio) and the connect dialog. (Note: It’s probably a good idea to run at least SQL Server Developer Edition on your local machine.)
 5. Back in the portal again reopen the connection strings. This is a good place to find the exact credentials to connect to  your database!
@@ -54,14 +54,14 @@ Using the same database server from before…
 
 9. From SSMS connect to a local SQL Server with the demo database.
 10. For instance you can use Adventureworks demo database: http://msftdbprodsamples.codeplex.com.
-11. Right click on the database and choose Tasks -> "Deploy Database to Windows Azure SQL Database...". This is a very short wizard which will deploy the whole thing to Azure!
+11. Right-click on the database and choose Tasks -> "Deploy Database to Windows Azure SQL Database...". This is a very short wizard which will deploy the whole thing to Azure!
 
 > **Speaking point:** The tool [SQL Azure Migration Wizard](http://sqlazuremw.codeplex.com) is an amazing tool to analyze databases for compatibility with Azure!
 
 12. Using SSMS open up the database in Azure!
 
 <a name="Demo3"></a>
-## Demo 3) DAC Deployment From SQL Server Management Studio ##
+## Demo 3) DAC Deployment from SQL Server Management Studio ##
 
 Use SSMS to deploy DAC pack to previously provisioned database server.
 
@@ -77,7 +77,7 @@ Demo:
 3. Follow the wizard and select your .dacpac.
 4. Deploy the database.
 
-You now have a database in Azure but no data deployed to it. In order to do that instead use a .bacpac
+You now have a database in Azure but no data deployed to it. In order to do that, use a .bacpac.
 
 <a name="Demo4"></a>
 ## Demo 4) Standing up a SQL Server in Azure using Marketplace ##
@@ -93,7 +93,7 @@ You now have a database in Azure but no data deployed to it. In order to do that
 > **Speaking point:** There are other fully supported options for SQL Storage in Azure, including Oracle and MySQL. These can all be viewed in the Marketplace.
 
 <a name="Demo5"></a>
-## Demo 5) View Document DB in the Azure Management Portal and create data using code ##
+## Demo 5) View Document DB in the Azure Portal and create data using code ##
 
 1. Use [http://portal.azure.com](http://portal.azure.com)
 2. Create a new DocumentDB and view it.
