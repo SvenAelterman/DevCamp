@@ -16,11 +16,11 @@ In these demos, you will see how to:
 Follow these steps to setup your environment for the demo.
 
 1. Sign into [Microsoft Azure Portal](http://portal.azure.com) and create a demo Storage account.
-2. Rename the template configuration file 'SharedConfiguration.original.config' -> SharedConfiguration.config and configure the "Azure Storage Account Demo Primary" connection string with they account name and key from your new storage account.
-3. Open the demo solution "Demos\Data-Storage-Demos.sln"" in Visual Studio and review the code demos. They are structured in once Unit Test class per demo. The general idea is that you walk through the code in your demo and also execute the unit tests from top to bottom in the classes!
+2. Rename the template configuration file 'SharedConfiguration.original.config' -> SharedConfiguration.config and configure the "Azure Storage Account Demo Primary" connection string with the account name and key from your new storage account.
+3. Open the demo solution "Demos\Data-Storage-Demos.sln"" in Visual Studio and review the code demos. They are structured in one Unit Test class per demo. The general idea is that you walk through the code in your demo and also execute the unit tests from top to bottom in the classes!
 4. Also go through the steps on the tooling and interaction demos below!
-5) Download a third party Storage Explorer tool of your choice from this list: [Azure Storage Explorers](http://blogs.msdn.com/b/windowsazurestorage/archive/2014/03/11/windows-azure-storage-explorers-2014.aspx)
-6) Connect to your Azure Storage demo account using the third party tool.
+5. Download a third-party Storage Explorer tool of your choice from this list: [Azure Storage Explorers](http://blogs.msdn.com/b/windowsazurestorage/archive/2014/03/11/windows-azure-storage-explorers-2014.aspx)
+6. Connect to your Azure Storage demo account using the third-party tool.
 
 <a name="Demo1"></a>
 ## Demo 1) Interact with Azure Storage Blobs ##
